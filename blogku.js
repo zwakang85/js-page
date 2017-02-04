@@ -1,3 +1,7 @@
-
+var dataPostM=[];
 var numItems = $('.homes').length;
-alert (numItems);
+var imPost= $('.homes').find('img').attr('src');
+var altPost= $('.homes').find('img').attr('alt');
+for (i=0;i<numItems;i++){
+   $('.homes').html('');
+}

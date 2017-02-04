@@ -1,2 +1,3 @@
-var lPost=$('.homes').length;
-alert (lPost);
+
+var numItems = $('.homes').length;
+alert (numItems);

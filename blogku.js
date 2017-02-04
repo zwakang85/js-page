@@ -1,2 +1,2 @@
-var lPost=$('.homes').lenght;
+var lPost=$('.homes').length;
 alert (lPost);

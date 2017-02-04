@@ -3,5 +3,5 @@ var numItems = $('.homes').length;
 var imPost= $('.homes').find('img').attr('src');
 var altPost= $('.homes').find('img').attr('alt');
 for (i=0;i<numItems;i++){
-   $('.homes').html('');
+   $('.homes:eq('+i+')').html('');
 }

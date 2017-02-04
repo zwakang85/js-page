@@ -9,4 +9,4 @@ for (i=0;i<numItems;i++){
    $('.homes:eq('+i+')').addClass( "grid-item" );
 }
 }
-setPost();
+//setPost();

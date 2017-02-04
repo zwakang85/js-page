@@ -6,6 +6,7 @@ for (i=0;i<numItems;i++){
    var altPost= $('.homes:eq('+i+')').find('img').attr('alt');
    $('.homes:eq('+i+')').html('');
    $('.homes:eq('+i+')').html('<img src="'+imPost+'" alt="'+altPost+'"/>');
+   $('.homes:eq('+i+')').addClass( "grid-item" );
 }
 }
 setPost();

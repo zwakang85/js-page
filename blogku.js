@@ -24,6 +24,9 @@ function showPost(){
   // options...
   },
   function() {
+      $('.grid').masonry({
+  itemSelector: '.homes'
+});
      if(countM!=numItems-1){
         showPost();
      }

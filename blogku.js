@@ -24,7 +24,7 @@ function showPost(){
   // options...
   },
   function() {
-     if(countM-1!=numItems){
+     if(countM!=numItems-1){
         showPost();
      }
        countM++;

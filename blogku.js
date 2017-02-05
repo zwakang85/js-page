@@ -19,11 +19,11 @@ setPost();
 function showPost(){
    countM++;
   $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a>');
-  $('.homes:eq('+countM+')').imagesLoaded( {
+   $('.homes:eq('+countM+')').addClass( "grid-item" );
+   $('.homes:eq('+countM+')').imagesLoaded( {
   // options...
   },
   function() {
-   $('.homes:eq('+countM+')').addClass( "grid-item" );
      if(countM!=numItems){
         showPost();
      }

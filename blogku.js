@@ -1,5 +1,6 @@
 var dataPostM=[];
 var numItems = $('.homes').length;
+var countM=0;
 function setPost(){
 for (i=0;i<numItems;i++){
    var imPost= $('.homes:eq('+i+')').find('img').attr('src');
@@ -9,17 +10,22 @@ for (i=0;i<numItems;i++){
    dataPostM['img'+i]=imPost;
    dataPostM['alt'+i]=altPost;
    dataPostM['link'+i]=linkPost;
-   $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
+   //$('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
 //   $('.homes:eq('+i+')').addClass( "grid-item" );
 }
-   $('.homes').imagesLoaded( {
-  // options...
-  },
-  function() {
-   $('.homes').addClass( "grid-item" );
-  });
+   
 }
 setPost();
 function showPost(){
-   
+  $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
+  $('.homes:eq('+i+')').imagesLoaded( {
+  // options...
+  },
+  function() {
+   $('.homes:eq('+countM+')').addClass( "grid-item" );
+     if(countM!=numItems){
+        showPost();
+     }
+  });
 }
+showPost();

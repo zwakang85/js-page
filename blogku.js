@@ -17,8 +17,9 @@ for (i=0;i<numItems;i++){
 }
 setPost();
 function showPost(){
-  $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
-  $('.homes:eq('+i+')').imagesLoaded( {
+   countM++;
+  $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a>');
+  $('.homes:eq('+countM+')').imagesLoaded( {
   // options...
   },
   function() {

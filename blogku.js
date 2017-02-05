@@ -6,8 +6,11 @@ for (i=0;i<numItems;i++){
    var altPost= $('.homes:eq('+i+')').find('img').attr('alt');
    var linkPost=$('.homes:eq('+i+')').find('.post-title a').attr('href');
    $('.homes:eq('+i+')').html('');
-   $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
-   $('.homes:eq('+i+')').addClass( "grid-item" );
+   dataPostM['img'+i]=imPost;
+   dataPostM['alt'+i]=altPost;
+   dataPostM['link'+i]=linkPost;
+  // $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
+  // $('.homes:eq('+i+')').addClass( "grid-item" );
 }
 }
 setPost();

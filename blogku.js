@@ -17,7 +17,7 @@ for (i=0;i<numItems;i++){
 }
 setPost();
 function showPost(){
-  $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a>');
+  $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a><span class="sp-img"></span>');
    $('.homes:eq('+countM+')').addClass( "grid-item" );
    $('.homes:eq('+countM+')').imagesLoaded( {
   // options...

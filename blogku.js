@@ -16,7 +16,7 @@ for (i=0;i<numItems;i++){
   // options...
   },
   function() {
-   $('.homes).addClass( "grid-item" );
+   $('.homes').addClass( "grid-item" );
   });
 }
 setPost();

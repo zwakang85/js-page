@@ -17,7 +17,6 @@ for (i=0;i<numItems;i++){
 }
 setPost();
 function showPost(){
-  
   $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a>');
    $('.homes:eq('+countM+')').addClass( "grid-item" );
    $('.homes:eq('+countM+')').imagesLoaded( {
@@ -25,7 +24,7 @@ function showPost(){
   },
   function() {
       $('.grid').masonry({
-  itemSelector: '.homes'
+  itemSelector: 'grid-item'
 });
      if(countM!=numItems-1){
         showPost();

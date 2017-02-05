@@ -17,16 +17,17 @@ for (i=0;i<numItems;i++){
 }
 setPost();
 function showPost(){
-   countM++;
+  
   $('.homes:eq('+countM+')').html('<a href="'+dataPostM['link'+countM]+'"><img src="'+dataPostM['img'+countM]+'" alt="'+dataPostM['img'+countM]+'" class="img-responsive"/></a>');
    $('.homes:eq('+countM+')').addClass( "grid-item" );
    $('.homes:eq('+countM+')').imagesLoaded( {
   // options...
   },
   function() {
-     if(countM!=numItems){
+     if(countM-1!=numItems){
         showPost();
      }
+       countM++;
   });
 }
 showPost();

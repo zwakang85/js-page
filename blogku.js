@@ -9,8 +9,18 @@ for (i=0;i<numItems;i++){
    dataPostM['img'+i]=imPost;
    dataPostM['alt'+i]=altPost;
    dataPostM['link'+i]=linkPost;
-  // $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
-  // $('.homes:eq('+i+')').addClass( "grid-item" );
+   $('.homes:eq('+i+')').html('<a href="'+linkPost+'"><img src="'+imPost+'" alt="'+altPost+'" class="img-responsive"/></a>');
+   $('.homes:eq('+i+')').addClass( "grid-item" );
 }
+   $('.homes').imagesLoaded( {
+  // options...
+  },
+  function() {
+   $('.homes).addClass( "grid-item" );
+  }
+);
 }
 setPost();
+function showPost(){
+   
+}

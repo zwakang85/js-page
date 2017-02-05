@@ -26,7 +26,7 @@ function showPost(){
       $('.grid').masonry({
   itemSelector: 'grid-item'
 });
-     if(countM!=numItems-1){
+     if(countM!=numItems){
         showPost();
      }
        countM++;
